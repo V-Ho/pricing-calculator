@@ -17,12 +17,12 @@
       <form>
         <div class="form-group">
           <label for="price">Price</label>
-          <input type="text" class="form-control" name="price" value="30">
+          <input type="text" class="form-control" name="price" value="15">
         </div>
 
         <div class="form-group">
           <label for="quantity">Quantity</label>
-          <input type="number" class="form-control" name="quantity" value="1">
+          <input type="range" class="form-control" name="quantity" value="1" min="1" max="10" step="1">
         </div>
 
         <div class="text-right text-giant total">$30</div>
@@ -50,6 +50,9 @@
       console.log(cost);
       total.innerText = '$' + cost.toFixed(2);//cost to 2 decimals
     }
+
+    //shows calculated cost on first run using numbers from form-group div
+    calculatePieCost()
 
 
 
